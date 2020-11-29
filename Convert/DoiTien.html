@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            margin: 0 auto;
+        }
+        th {
+            text-align: left;
+        }
+        td {
+            /*border: 1px solid #dddddd;*/
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+<form >
+
+    <table width="50%">
+        <tr>
+            <th>Amount</th>
+
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+            <input type="text" id="amount" value="">
+            </td>
+
+            <td>
+                <select id="select">
+                    <option value="USD">USD </option>
+                    <option value="EUR">EUR </option>
+                    <option value="GPB">GBP </option>
+                    <option value="AUD">AUD </option>
+                    <option value="JPY">JPY </option>
+                </select>
+            </td>
+            <td>
+                <select id="select1">
+                    <option value="USD">USD </option>
+                    <option value="EUR">EUR </option>
+                    <option value="GPB">GBP </option>
+                    <option value="AUD">AUD </option>
+                    <option value="JPY">JPY </option>
+                </select>
+            </td>
+
+        <td>
+                <button type="button"  onclick="calculate();">Convert</button>
+                <input type="reset" value="Reset">
+
+            </td>
+        </tr>
+        <td>        <p>Result:</p><p id="result"></p>
+        </td>
+    </table>
+</form>
+<!--<h1>Convert US Dollars to Euros </h1>-->
+<!--<form>-->
+<!--    <p>-->
+<!--        <label for="amount">Amount:</label>-->
+<!--        <input type="text" id="amount" value="">-->
+<!--        <select id="select">-->
+<!--            <option value="USD">USD </option>-->
+<!--            <option value="EUR">EUR </option>-->
+<!--            <option value="GPB">GBP </option>-->
+<!--            <option value="AUD">AUD </option>-->
+<!--            <option value="JPY">JPY </option>-->
+<!--        </select>-->
+<!--        <select id="select1">-->
+<!--            <option value="USD">USD </option>-->
+<!--            <option value="EUR">EUR </option>-->
+<!--            <option value="GPB">GBP </option>-->
+<!--            <option value="AUD">AUD </option>-->
+<!--            <option value="JPY">JPY </option>-->
+<!--        </select>-->
+<!--        <p>Result:</p><p id="result"></p>-->
+<!--    </p>-->
+<!--    <p>-->
+<!--        <input type="button" value="Calculate" onclick="calculate();">-->
+<!--        <input type="reset" value="Reset">-->
+<!--    </p>-->
+<!--</form>-->
+<!--
+    This script downloaded from www.JavaScriptBank.com
+    Come to view and download over 2000+ free javascript at www.JavaScriptBank.com
+-->
+
+<script>
+    function calculate() {
+        var amount = parseFloat(document.getElementById("amount").value);
+        var select = document.getElementById("select");
+        var select1 = document.getElementById("select1");
+        var result = document.getElementById("result");
+
+        if (select.value === "USD" && select1.value === "USD")  {
+            result.value = (amount * 1);
+            document.getElementById("result").innerHTML = result.value;
+        }
+        if (select.value === "USD" && select1.value === "EUR")  {
+            result.value = (amount * 0.88);
+            document.getElementById("result").innerHTML = result.value;
+
+        }
+
+    }
+</script>
+
+
+</body>
+</html>
