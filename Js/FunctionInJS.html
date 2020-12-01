@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert("Xin Chao");
+    var inp = +prompt('Nhập giá trị: ');
+    alert('Giá  trị sau khi tăng 1 đơn vị: ' + incVal(inp));
+    function incVal(value) {
+        return value+=1;
+    }
+    alert('Nhập vào 2 giá trị!');
+    var inp1 = +prompt('Giá trị thứ nhất: ');
+    var inp2 = +prompt('Giá trị thứ hai: ');
+    if(inp1 > inp2) {
+        alert('Giá trị thứ 1 lớn hơn giá trị thứ 2');
+    } else {
+        alert('Tổng 2 giá trị là: ' + sumVal(inp1, inp2));
+    }
+    function sumVal(value1, value2) {
+        return  value1+value2;
+    }
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+    result = 0;
+    alert('Trước khi gọi hàm: ' + result);
+    result = addNumbers();
+    alert('Sau khi gọi hàm: ' + result);
+
+</script>
+</body>
+</html>
